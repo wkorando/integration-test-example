@@ -20,7 +20,9 @@ public class DataSourceConfig {
 		dataSource.setUrl(env.getRequiredProperty("datasource.url"));
 		dataSource.setUsername(env.getRequiredProperty("datasource.user"));
 		dataSource.setPassword(env.getRequiredProperty("datasource.password"));
-		dataSource.setMaxActive(1);
+		dataSource.setValidationQuery("SELECT 1");
+		dataSource.setTestOnBorrow(true);
+		dataSource.setValidationInterval(100);
 		return dataSource;
 	}
 }

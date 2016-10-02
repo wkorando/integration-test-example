@@ -56,7 +56,7 @@ public class ITDatabaseFailureAndRecovery {
             conn.createStatement().execute("SELECT 1");
             fail("Database is down at this point, call should fail");
         } catch (Exception e) {
-
+        	LOGGER.debug("EXPECTED CONNECTION FAILURE");
         }
         LOGGER.debug("STARTING DB");
         Runtime.getRuntime().exec("/usr/local/mysql/support-files/mysql.server start").waitFor();

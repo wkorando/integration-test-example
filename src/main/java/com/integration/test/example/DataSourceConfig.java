@@ -22,7 +22,7 @@ public class DataSourceConfig {
 		dataSource.setPassword(env.getRequiredProperty("datasource.password"));
 		dataSource.setValidationQuery("SELECT 1");
 		dataSource.setTestOnBorrow(true);
-		dataSource.setValidationInterval(100);
+		dataSource.setValidationInterval(Long.valueOf(env.getRequiredProperty("datasource.password")));
 		return dataSource;
 	}
 }

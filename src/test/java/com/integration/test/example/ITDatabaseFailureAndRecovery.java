@@ -43,7 +43,7 @@ public class ITDatabaseFailureAndRecovery {
     }
 
     @Test
-    public void testServiceRecoveryFromDatabaseOutage() throws SQLException, InterruptedException, IOException {
+    public void testServiceRecoveryFromDatabaseOutageAndRecovery() throws SQLException, InterruptedException, IOException {
         Connection conn = null;
         conn = DataSourceUtils.getConnection(datasource);
         assertTrue(conn.createStatement().execute("SELECT 1"));

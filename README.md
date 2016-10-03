@@ -1,1 +1,3 @@
-Example of how to write an integration test to test for database outage and subsequent recover. 
+Simple example of how to write an automated integration test for a failure scenario.
+
+Specifically the scenario is testing how a service recovers from when a database that has an outage and then returns to normal.
